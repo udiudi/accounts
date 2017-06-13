@@ -8,7 +8,7 @@ import { AccountsError, validators } from '@accounts/common';
 import type {
   CreateUserType,
   PasswordLoginUserType,
-  PasswordLoginUserIdentityType,
+  LoginUserIdentityType,
   LoginReturnType,
   UserObjectType,
   TokensType,
@@ -31,7 +31,7 @@ import { hashPassword } from './encryption';
 import type { TransportInterface } from './TransportInterface';
 import type { TokenStorage, AccountsClientConfiguration } from './config';
 
-const isValidUserObject = (user: PasswordLoginUserIdentityType) => has(user, 'user') || has(user, 'email') || has(user, 'id');
+const isValidUserObject = (user: LoginUserIdentityType) => has(user, 'user') || has(user, 'email') || has(user, 'id');
 
 const ACCESS_TOKEN = 'accounts:accessToken';
 const REFRESH_TOKEN = 'accounts:refreshToken';

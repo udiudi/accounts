@@ -4,6 +4,7 @@ import type {
   UserObjectType,
   CreateUserType,
   SessionType,
+  LoginUserIdentityType
 } from '@accounts/common';
 
 export interface DBInterface {
@@ -12,6 +13,7 @@ export interface DBInterface {
   findUserByEmail(email: string) : Promise<?UserObjectType>,
   findUserByUsername(username: string) : Promise<?UserObjectType>,
   findUserById(userId: string) : Promise<?UserObjectType>,
+  findUser(identity: LoginUserIdentityType): Promise<?UserObjectType>,
   findUserByEmailVerificationToken(token: string) : Promise<?UserObjectType>,
   findUserByResetPasswordToken(token: string) : Promise<?UserObjectType>,
   setUsername(userId: string, newUsername: string) : Promise<void>,

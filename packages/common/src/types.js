@@ -23,13 +23,13 @@ export type CreateUserType = {
   profile?: Object
 };
 
-export type PasswordLoginUserIdentityType = {
+export type LoginUserIdentityType = {
   id?: string,
   username?: string,
   email?: string
 };
 
-export type PasswordLoginUserType = string | PasswordLoginUserIdentityType;
+export type PasswordLoginUserType = string | LoginUserIdentityType;
 
 export type TokensType = {
   accessToken: ?string,
