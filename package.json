@@ -1,7 +1,15 @@
 {
   "private": true,
   "scripts": {
-
+    "compile": "oao all \"npm run compile\"",
+    "lint": "tslint ./packages/**/src/**/*.ts --exclude \"./packages/**/node_modules/**/*.ts\"",
+    "postinstall": "oao bootstrap"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "packages"
+    ]
   },
   "repository": {
     "type": "git",
@@ -9,6 +17,10 @@
   },
   "license": "MIT",
   "devDependencies": {
-
+    "@types/jest": "^20.0.2",
+    "@types/node": "^8.0.4",
+    "oao": "^0.8.5",
+    "tslint": "^5.4.3",
+    "typescript": "^2.4.1"
   }
 }
