@@ -585,6 +585,17 @@ export class AccountsServer {
   }
 
   /**
+   * @description Set username of specified user
+   * Use this instead of directly updating the database.
+   * @param {string} userId - User id.
+   * @param {string} newUsername - A new username for the user.
+   * @returns {Promise<void>} - Return a Promise.
+   */
+  setUsername(userId: string, newUsername: string): Promise<void> {
+    return this.db.setUsername(userId, newUsername);
+  }
+
+  /**
    * @description Add an email address for a user.
    * Use this instead of directly updating the database.
    * @param {string} userId - User id.
