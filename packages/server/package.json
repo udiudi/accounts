@@ -49,7 +49,7 @@
   "dependencies": {
     "@accounts/common": "^0.0.18",
     "babel-polyfill": "^6.23.0",
-    "bcryptjs": "^2.4.0",
+    "bcrypt": "^1.0.3",
     "crypto": "^0.0.3",
     "emailjs": "^1.0.8",
     "jsonwebtoken": "^7.2.1",
